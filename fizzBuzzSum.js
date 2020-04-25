@@ -4,21 +4,26 @@
 // ルール3. 15の倍数の時は、"fizz-buzz" 
 // ルール4. 上記以外の数字の場合は、えそのまま
 
-const result = [];
-// let resultSum = 0;
+// const result = [];
+let resultSum = 0;
 
 for (let index = 1; index <= 15; index++) {
-    let text = index;
+    const isFizzBuzz = index % 3 == 0 || index % 5 == 0;
 
-    if (index % 15 == 0){
-        text = 'fizz-buzz'
-    } else if ((index % 3) == 0) {
-        text = 'fizz';
-    } else if (index % 5 == 0){
-        text = 'buzz'
-    } else {
-        result.push(index);
+    if (!isFizzBuzz) {
+        resultSum += index;
     }
+
+    // if (index % 15 == 0){
+    //     text = 'fizz-buzz'
+    // } else if ((index % 3) == 0) {
+    //     text = 'fizz';
+    // } else if (index % 5 == 0){
+    //     text = 'buzz'
+    // } else {
+    //     // result.push(index);
+    //     resultSum += index;
+    // }
 }
 
 // console.log(result);
@@ -38,9 +43,9 @@ for (let index = 1; index <= 15; index++) {
 //     console.log(resultSum);
 // });
 
-resultSum = result.reduce(
-    (a, x) => a + x, 0
-);
+// resultSum = result.reduce(
+//     (a, x) => a + x, 0
+// );
 
 console.log(resultSum);
 
