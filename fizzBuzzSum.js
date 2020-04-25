@@ -5,7 +5,7 @@
 // ルール4. 上記以外の数字の場合は、えそのまま
 
 const result = [];
-let resultSum =0;
+let resultSum = 0;
 
 for (let index = 1; index <= 15; index++) {
     let text = index;
@@ -23,10 +23,23 @@ for (let index = 1; index <= 15; index++) {
 
 // console.log(result);
 
-for (let index = 0; index < result.length; index++) {
-    resultSum += result[index];
-    // console.log(resultSum);
-}
-console.log(resultSum);
+// for (let index = 0; index <= result.length; index++) {
+//     resultSum += result[index];
+//     // console.log(resultSum);
+// }
+
+// array1.forEach(element => console.log(element));
+
+// result.forEach(element => console.log(element));
+
+
+result.forEach(element => {
+    resultSum += element;
+    console.log(resultSum);
+});
+
+
+// console.log(resultSum);
+
 //  15 -> expect: 60
 //  1000000 -> expect: 266666333332
