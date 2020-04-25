@@ -5,7 +5,7 @@
 // ルール4. 上記以外の数字の場合は、えそのまま
 
 const result = [];
-let resultSum = 0;
+// let resultSum = 0;
 
 for (let index = 1; index <= 15; index++) {
     let text = index;
@@ -33,13 +33,16 @@ for (let index = 1; index <= 15; index++) {
 // result.forEach(element => console.log(element));
 
 
-result.forEach(element => {
-    resultSum += element;
-    console.log(resultSum);
-});
+// result.forEach(element => {
+//     resultSum += element;
+//     console.log(resultSum);
+// });
 
+resultSum = result.reduce(
+    (a, x) => a + x, 0
+);
 
-// console.log(resultSum);
+console.log(resultSum);
 
 //  15 -> expect: 60
 //  1000000 -> expect: 266666333332
