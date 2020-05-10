@@ -1,7 +1,6 @@
 function Main(input) {
-    console.log("");
-
-    const s = input;
+    const lines = input.split('\n')
+    const s = lines[0];
 
     if (s == 'ABC') {
         console.log('ARC')
